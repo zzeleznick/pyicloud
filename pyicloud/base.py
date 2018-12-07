@@ -25,7 +25,6 @@ from pyicloud.services import (
     PhotosService,
     AccountService
 )
-from pyicloud.utils import get_password_from_keyring
 
 if six.PY3:
     import http.cookiejar as cookielib
@@ -138,7 +137,7 @@ class PyiCloudService(object):
         self, apple_id, password=None, cookie_directory=None, verify=True
     ):
         if password is None:
-            password = get_password_from_keyring(apple_id)
+            raise RuntimeError('No password provided.')
 
         self.data = {}
         self.client_id = str(uuid.uuid1()).upper()
