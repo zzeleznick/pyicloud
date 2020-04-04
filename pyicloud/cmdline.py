@@ -184,10 +184,10 @@ def main(args=None):
         utils.delete_password_in_keyring(username)
 
     if not username:
-        parser.error('No username supplied')
+        parser.error("No username supplied")
 
     if not password:
-        parser.error('No password supplied')
+        parser.error("No password supplied")
 
     failure_count = 0
     while True:
@@ -358,6 +358,7 @@ def main(args=None):
                         )
                     )
     sys.exit(0)
+
 
 if __name__ == "__main__":
     main()

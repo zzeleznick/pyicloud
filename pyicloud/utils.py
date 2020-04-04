@@ -55,6 +55,7 @@ def delete_password_in_keyring(username):
     """Delete the password of a username."""
     return keyring.delete_password(KEYRING_SYSTEM, username,)
 
+
 def underscore_to_camelcase(word, initial_capital=False):
     """Transform a word to camelCase."""
     words = [x.capitalize() or "_" for x in word.split("_")]

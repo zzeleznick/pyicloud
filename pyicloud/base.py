@@ -164,7 +164,7 @@ class PyiCloudService(object):
         with_family=True,
     ):
         if password is None:
-            raise RuntimeError('No password provided.')
+            raise RuntimeError("No password provided.")
 
         self.data = {}
         self.client_id = client_id or str(uuid.uuid1()).upper()
